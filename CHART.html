@@ -1,0 +1,291 @@
+<html><head><meta charset="UTF-8" /><style>/*Author:sawa.The default design */*{box-sizing:border-box;-webkit-user-select:text;-khtml-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text;}body,table{font-family:sans-serif;font-size:12px;}body{margin:0;display:flex;flex-wrap:nowrap;align-items:stretch;flex-direction:row;height:100%;text-align:justify;text-rendering:optimizelegibility;color:hsl(100,0%,30%);background-color:hsl(0,0%,100%);word-break:normal;}#top,#top-title{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;font-size:18px;}#top *{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}#top,#user #top-title{padding:2;background-color:hsl(0,0%,97%);color:hsl(0,0%,30%);}#dev #top-title{margin:1em;color:white;}#user #top-title,#dev #top{border-bottom:solid 6px hsl(211,85%,29%);}#top >span{margin-left:5;margin-right:5;display:inline-flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;white-space:pre;padding-top:4;padding-bottom:4;}.separator{font-size:18px;color:hsl(60,5%,72%);margin-left:0.5em;margin-right:0.5em;}#left{padding:0 20 24 40;flex-basis:480px;flex-shrink:0;display:flex;flex-wrap:nowrap;align-items:stretch;flex-direction:column;border-right:solid 1px hsl(60,5%,68%);background-color:#4F6B89;color:hsl(0,0%,100%);}#left .tablewrapper{max-height:32%;overflow-y:auto;border-top:solid 1px hsl(60,5%,85%);border-bottom:solid 1px hsl(60,5%,85%);}#left table{margin:0;width:100%;background-color:hsl(0,0%,100%);}#gemspec td:nth-child(1){white-space:nowrap;}#gemspec td:nth-child(2){word-break:break-all;}#files td:nth-child(3),#files td:nth-child(4){white-space:nowrap;}#files td:nth-child(4){text-align:right;}#right{display:flex;flex-wrap:nowrap;align-items:stretch;flex-direction:column;overflow:hidden;flex-grow:1;}#main{flex-basis:0;flex-grow:1;display:flex;flex-wrap:nowrap;align-items:stretch;flex-direction:column;overflow-y:auto;}#user #main{padding-top:12;padding-bottom:12;padding-right:240;padding-left:240;}#dev #main{padding-top:12;padding-bottom:12;padding-right:40;padding-left:20;}#main:before{position:fixed;margin-top:20px;margin-left:-20px;content:"\25B8";/*blacktriangleright */}#user #main:before{top:234;}#dev #main:before{top:300;}[onclick]:not([folded]){cursor:pointer;}[onclick][folded="true"]{cursor:s-resize;}[onclick][folded="false"]{cursor:n-resize;}table{border-collapse:collapse;margin-top:1em;margin-bottom:1em;}tr{border-color:hsl(60,27%,78%);border-style:solid;}#left tr:first-of-type{border-left-width:1px;border-right-width:1px;border-top-width:0;border-bottom-width:1px;}#left tr:last-of-type{border-left-width:1px;border-right-width:1px;border-top-width:1px;border-bottom-width:0;}#main tr,#left tr:not(:last-of-type):not(:first-of-type){border-left-width:1px;border-right-width:1px;border-top-width:1px;border-bottom-width:1px;}td{padding-left:3px;padding-right:3px;border-style:solid;border-color:hsl(60,27%,78%);border-width:1px;}figure{text-align:center;margin-left:0;margin-right:0;}figcaption{text-align:center;margin:2;}input{vertical-align:middle;}h1,h2,h3,h4{display:flex;flex-direction:row;align-items:center;white-space:pre-wrap;word-break:break-word;font-weight:normal;/*color:hsl(180,93%,6%);*/}h1{color:hsl(9,30%,15%);}h2{font-size:163%;margin-left:1em;margin-right:0.5em;color:hsl(9,30%,15%);}h3{font-size:140%;margin-left:1em;margin-right:0.5em;padding-left:1em;border-bottom:solid 1px hsl(0,0%,80%);color:hsl(9,30%,15%);}h4{font-size:120%;margin-left:1em;margin-right:0.5em;padding-left:2em;border-bottom:solid 1px hsl(0,0%,80%);font-style:oblique;color:hsl(9,30%,15%);}h5{font-size:110%;margin-left:1em;margin-right:0.5em;padding-left:3em;border-bottom:solid 1px hsl(0,0%,80%);color:hsl(9,30%,15%);}h6{font-size:100%;margin-left:1em;margin-right:0.5em;padding-left:4em;border-bottom:solid 1px hsl(0,0%,80%);color:hsl(9,30%,15%);}.module-header{/*Margin among `h2.module-header`does not collapse because of extra embedding level `.margin`.Hence margin needs to be set to half of other `h2`.*/margin-top:0.415em;margin-bottom:0.415em;}.feature:not(:first-child)[onclick]:hover{background-color:hsl(90,10%,97%);}.feature-name{font-size:110%;font-weight:bold;font-family:sans-serif;}[folded="true"]>h1,[folded="true"]>h2,[folded="true"]>h3,[folded="true"]>h4,[folded="true"]>h5,[folded="true"]>h6{box-shadow:inset 0px -21px 46px -26px hsla(0,0%,0%,0.2);}.feature-contents{padding-left:1em;}.head{font-weight:bold;font-family:sans-serif;font-size:15px;}.user-item,.dev-item{margin-top:1;margin-bottom:1;padding-left:0.5em;padding-right:0.5em;border-radius:5px;}#dev .user-item{background-color:hsl(180,20%,86%);padding-top:0.1px;padding-bottom:0.1px;}.diagram{text-align:left;margin:0.75em 2em;}.mixins{display:inline-block;margin:2 1;background-color:#c2ccd5;border:solid 1px #246a7d;color:#246a7d;padding:1 4;border-radius:2px;font-size:10.5px;}.mixins >div{width:100%;text-align:center;line-height:2.55ex;}.mixins >.baseline ~div{float:left;clear:both;}.p,li{font-family:serif;font-size:17px;}.p{margin-top:1em;margin-bottom:1em;}.CodeRay,table,figure{margin-top:1.33em;margin-bottom:1.33em;margin-left:2em;margin-right:2em;}.dev-text,table{font-family:sans-serif;font-size:13px;}.CodeRay{overflow-x:auto;}.CodeRay,code{font-size:12px;}.inline{padding:3px 4px;line-height:2.5ex;border-radius:0.4ex;white-space:pre-wrap;font-size:12px;background-color:hsl(50,35%,89%);color:hsl(0,0%,40%);word-break:break-all;}li{margin-top:5;margin-bottom:5;}.indent{padding-left:2.3em;}.hang-indent{margin-right:-2.3em;}.statistics{font-size:12px;}#current{color:black;font-weight:bold;}.navigation{display:inline-flex;flex-direction:row;align-items:center;}.mode.tag,.arrow.tag,.missing_doc.tag,.navigation .bad_doc.tag,.agenda.tag,.log.tag,.missing_test.tag,.bad_test.tag,.untestable.tag,.bug.tag,.success.tag,.benchmark.tag{display:inline-flex;flex-direction:row;align-items:center;justify-content:center;white-space:pre;height:18px;margin:2 0;padding-left:5.5;padding-right:5.5;font-family:sans-serif;font-size:10px;font-weight:500;border-radius:9px;}.unimplemented.tag,.protected.tag,.private.tag,.public.tag,.constant.tag,.singleton.tag,.instance.tag,.undocumented.tag,.hidden.tag,.misplaced.tag,.moved.tag{display:inline-flex;flex-direction:row;align-items:center;justify-content:center;white-space:pre;height:18px;margin:2 0;padding-left:5.5;padding-right:5.5;font-family:sans-serif;font-size:10px;font-weight:500;border-radius:2px;}.tag.mode,.tag.arrow{color:hsl(9,69%,16%);vertical-align:middle;line-height:100%;font-size:12px;}.constant{color:#DB7551;}.constant.tag{background-color:#DB7551;color:white;}.singleton{color:#68894F;}.singleton.tag{background-color:#68894F;color:white;}.instance{color:#4F6589;}.instance.tag{background-color:#4F6589;color:white;}.public{color:#090705;}.public.tag{background-color:#CCBBA7;border:solid 1px;}.private{color:#090705;}.private.tag{background-color:#9B7C59;border:solid 1px;}.protected{color:#D6AF86;}.protected.tag{background-color:#47160D;border:solid 1px;}.hidden,.moved{color:gray;}.hidden.tag,.moved.tag{background-color:white;color:#878787;border:solid 1px;}.agenda{color:#878787;}.agenda.tag{background-color:#878787;color:white;}.log{color:#878787;}.log.tag{background-color:white;color:#878787;border:solid 1px;}.undocumented,.misplaced,.missing_doc,.bad_doc,.missing_test,.bad_test{color:#F79833;}.navigation .bad_doc{font-weight:inherit;text-decoration:inherit;}.anchor .bad_doc{font-weight:bold;border-bottom:dotted 2px;}.undocumented.tag,.misplaced.tag,.missing_doc.tag,.navigation .bad_doc.tag,.missing_test.tag,.bad_test.tag{background-color:#F79833;color:white;}.untestable{color:hsl(54,43%,38%);}.untestable.tag{background-color:hsl(54,43%,38%);color:white;}.unimplemented,.bug{color:hsl(0,80%,50%);}.unimplemented.tag,.bug.tag{background-color:hsl(0,80%,50%);color:white;}.success{color:#00a15a;}.success.tag{background-color:#00a15a;color:white;}.backtrace col:nth-child(1){width:100%;}.backtrace td:nth-child(2)>code{white-space:nowrap;}.benchmark{color:hsl(263,43%,38%);}.benchmark.tag{background-color:hsl(263,43%,38%);color:white;}.barcharts{border-collapse:separate;border-spacing:3 0;}.barcharts col:nth-child(2){width:100%;}.barcharts td:nth-child(1)>code{float:right;font-size:73%;white-space:nowrap;}.barcharts td:nth-child(2){padding:3 0;background-color:hsl(250,7%,92%);}caption{margin:4;}.barchart{display:flex;flex-wrap:nowrap;align-items:stretch;flex-direction:row;height:21px;}.barchart .fill{padding:0 6;background-color:hsl(240,40%,50%);min-width:1;color:hsl(0,0%,63%);font-family:sans-serif;font-size:75%;text-align:right;white-space:nowrap;overflow:visible;line-height:21px;}.barchart .minedge{background-color:hsl(0,50%,50%);border-style:solid;border-left-width:0;border-right-width:0;border-top-width:5px;border-bottom-width:5px;border-color:hsl(240,40%,50%);width:1px;}.barchart .maxedge{background-color:hsl(0,50%,50%);border-style:solid;border-left-width:0;border-right-width:0;border-top-width:5px;border-bottom-width:5px;border-color:hsl(250,7%,92%);width:1px;}.barchart .min{background-color:hsl(0,50%,50%);border-style:solid;border-left-width:0;border-right-width:0;border-top-width:10px;border-bottom-width:10px;border-color:hsl(240,40%,50%);}.barchart .max{background-color:hsl(0,50%,50%);border-style:solid;border-left-width:0;border-right-width:0;border-top-width:10px;border-bottom-width:10px;border-color:hsl(250,7%,92%);}.verification{color:hsl(180,61%,50%);}.gray{color:darkgray;}.right{float:right;}.clear{clear:both;}/*Terminal decorations*/.italic{font-style:italic;}.bold{font-weight:bold;}.underline{text-decoration:underline;}.black{color:#000000;}.red{color:#c75646;}.green{color:#8eb33b;}.yellow{color:#d0b03c;}.blue{color:#72b3cc;}.magenta{color:#c8a0d1;}.cyan{color:#218693;}.white{color:#b0b0b0;}.bg-black{background-color:#5d5d5d;}.bg-red{background-color:#e09690;}.bg-green{background-color:#cdee69;}.bg-yellow{background-color:#ffe337;}.bg-blue{background-color:#9cd9f0;}.bg-magenta{background-color:#fbb1f9;}.bg-cyan{background-color:#77dfd8;}.bg-white{background-color:#f7f7f7;}</style><style>.CodeRay {background-color:#FFF;border:1px solid #CCC;font-family:Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;color:#000;padding:1em 0px 1em 1em;}.CodeRay pre {margin:0px;}div.CodeRay {}span.CodeRay {white-space:pre;border:0px;padding:2px }table.CodeRay {border-collapse:collapse;width:100%;padding:2px }table.CodeRay td {padding:1em 0.5em;vertical-align:top;}.CodeRay .line-numbers,.CodeRay .no {background-color:#ECECEC;color:#AAA;text-align:right;}.CodeRay .line-numbers a {color:#AAA;}.CodeRay .line-numbers tt {font-weight:bold }.CodeRay .line-numbers .highlighted {color:red }.CodeRay .line {display:block;float:left;width:100%;}.CodeRay span.line-numbers {padding:0px 4px }.CodeRay .code {width:100%}ol.CodeRay {font-size:10pt }ol.CodeRay li {white-space:pre }.CodeRay .code pre {overflow:auto }.CodeRay .debug {color:white !important;background:blue !important;}.CodeRay .annotation {color:#007 }.CodeRay .attribute-name {color:#f08 }.CodeRay .attribute-value {color:#700 }.CodeRay .binary {color:#509;font-weight:bold }.CodeRay .comment {color:#998;font-style:italic;}.CodeRay .char {color:#04D }.CodeRay .char .content {color:#04D }.CodeRay .char .delimiter {color:#039 }.CodeRay .class {color:#458;font-weight:bold }.CodeRay .complex {color:#A08;font-weight:bold }.CodeRay .constant {color:teal;}.CodeRay .color {color:#0A0 }.CodeRay .class-variable {color:#369 }.CodeRay .decorator {color:#B0B;}.CodeRay .definition {color:#099;font-weight:bold }.CodeRay .directive {color:#088;font-weight:bold }.CodeRay .delimiter {color:black }.CodeRay .doc {color:#970 }.CodeRay .doctype {color:#34b }.CodeRay .doc-string {color:#D42;font-weight:bold }.CodeRay .escape {color:#666;font-weight:bold }.CodeRay .entity {color:#800;font-weight:bold }.CodeRay .error {color:#F00;background-color:#FAA }.CodeRay .exception {color:#C00;font-weight:bold }.CodeRay .filename {color:#099;}.CodeRay .function {color:#900;font-weight:bold }.CodeRay .global-variable {color:teal;font-weight:bold }.CodeRay .hex {color:#058;font-weight:bold }.CodeRay .integer {color:#099;}.CodeRay .include {color:#B44;font-weight:bold }.CodeRay .inline {color:black }.CodeRay .inline .inline {background:#ccc }.CodeRay .inline .inline .inline {background:#bbb }.CodeRay .inline .inline-delimiter {color:#D14;}.CodeRay .inline-delimiter {color:#D14;}.CodeRay .important {color:#f00;}.CodeRay .interpreted {color:#B2B;font-weight:bold }.CodeRay .instance-variable {color:teal }.CodeRay .label {color:#970;font-weight:bold }.CodeRay .local-variable {color:#963 }.CodeRay .octal {color:#40E;font-weight:bold }.CodeRay .operator {}.CodeRay .predefined-constant {font-weight:bold }.CodeRay .predefined {color:#369;font-weight:bold }.CodeRay .preprocessor {color:#579;}.CodeRay .pseudo-class {color:#00C;font-weight:bold }.CodeRay .predefined-type {color:#074;font-weight:bold }.CodeRay .reserved,.keyword {color:#000;font-weight:bold }.CodeRay .key {color:#808;}.CodeRay .key .delimiter {color:#606;}.CodeRay .key .char {color:#80f;}.CodeRay .value {color:#088;}.CodeRay .regexp {background-color:#fff0ff }.CodeRay .regexp .content {color:#808 }.CodeRay .regexp .delimiter {color:#404 }.CodeRay .regexp .modifier {color:#C2C }.CodeRay .regexp .function {color:#404;font-weight:bold }.CodeRay .string {color:#D20;}.CodeRay .string .string {}.CodeRay .string .string .string {background-color:#ffd0d0 }.CodeRay .string .content {color:#D14;}.CodeRay .string .char {color:#D14;}.CodeRay .string .delimiter {color:#D14;}.CodeRay .shell {color:#D14 }.CodeRay .shell .content {}.CodeRay .shell .delimiter {color:#D14 }.CodeRay .symbol {color:#990073 }.CodeRay .symbol .content {color:#A60 }.CodeRay .symbol .delimiter {color:#630 }.CodeRay .tag {color:#070 }.CodeRay .tag-special {color:#D70;font-weight:bold }.CodeRay .type {color:#339;font-weight:bold }.CodeRay .variable {color:#036 }.CodeRay .insert {background:#afa;}.CodeRay .delete {background:#faa;}.CodeRay .change {color:#aaf;background:#007;}.CodeRay .head {color:#f8f;background:#505 }.CodeRay .insert .insert {color:#080;font-weight:bold }.CodeRay .delete .delete {color:#800;font-weight:bold }.CodeRay .change .change {color:#66f;}.CodeRay .head .head {color:#f4f;}</style><title>compact_time Developer&apos;s Chart</title></head><body id="dev"><div id="left"><span id="top-title">“compact_time” Developer&apos;s Chart</span><div class="p"><span class="head">Base Directory</span></div><code>/home/sawa/Dropbox/implicit/gem/compact_time</code><div class="p"><span class="head">Files</span></div><div class="tablewrapper"><table id="files"><colgroup><col /><col /><col /><col /><col /></colgroup><tbody><tr><td>Category</td><td>Name</td><td>Version</td><td>Lines</td></tr><tr><td>Depended</td><td><code>ruby</code></td><td>2.3.1p112</td><td></td></tr><tr><td>Specification</td><td><code style="word-break:break-all;">spec</code></td><td><div class="bold">2016-04-25 16:20</div></td><td>104</td></tr><tr><td><span data-file="/home/sawa/Dropbox/implicit/gem/compact_time/lib/compact_time.rb" data-coverage=",,1,2,3,3,4,1,4,4,4,4,,,1,1,,,1,1," onclick="coverage(this)">100.00% Tested</span></td><td><code style="word-break:break-all;">lib/compact_time.rb</code></td><td><div>2016-04-24 18:38</div></td><td>21</td></tr></tbody></table></div></div><div id="right"><div id="top"><span class="navigation"><span class="tag mode" onclick="displayMode(true, true)">Modules</span><span class="tag mode" onclick="displayMode(false, true)">Features</span><span class="tag mode" onclick="displayMode(false, false)">Full</span></span><span class="separator">│</span><span class="tag mode" onclick="toggleUserItems(this)">User Items</span><span class="separator">│</span><span class="navigation"><span class="tag protected" onclick="toggleFeatures(this, 'protected', 'user-feature-navigation1')">protected</span> <span class="protected" id="tagsum-protected">8</span> <span class="tag public" onclick="toggleFeatures(this, 'public', 'user-feature-navigation1')">public</span> <span class="public" id="tagsum-public">13</span> <span id="user-feature-navigation1" data-tags="unimplemented protected private public"><span class="tag arrow" onclick="navigateTag(this.parentNode, -1)">◂</span><span class="tag arrow" onclick="navigateTag(this.parentNode, 1)">▸</span> <span class="statistics"><span class="current">1</span>/<span class="sum"></span>+<span class="excluded"></span></span> </span></span> <span class="navigation"><span class="tag constant" onclick="toggleFeatures(this, 'constant', 'user-feature-navigation2')">Constant</span> <span class="constant" id="tagsum-constant">2</span> <span class="tag instance" onclick="toggleFeatures(this, 'instance', 'user-feature-navigation2')">Instance method</span> <span class="instance" id="tagsum-instance">16</span> <span id="user-feature-navigation2" data-tags="constant singleton instance"><span class="tag arrow" onclick="navigateTag(this.parentNode, -1)">◂</span><span class="tag arrow" onclick="navigateTag(this.parentNode, 1)">▸</span> <span class="statistics"><span class="current">1</span>/<span class="sum"></span>+<span class="excluded"></span></span> </span></span> <span class="navigation"><span class="tag hidden" onclick="toggleFeatures(this, 'hidden', 'dev-feature-navigation1')">Hidden</span> <span class="hidden" id="tagsum-hidden">6</span> <span class="tag moved" onclick="toggleFeatures(this, 'moved', 'dev-feature-navigation1')">Moved</span> <span class="moved" id="tagsum-moved">2</span> <span id="dev-feature-navigation1" data-tags="undocumented hidden misplaced moved"><span class="tag arrow" onclick="navigateTag(this.parentNode, -1)">◂</span><span class="tag arrow" onclick="navigateTag(this.parentNode, 1)">▸</span> <span class="statistics"><span class="current">1</span>/<span class="sum"></span>+<span class="excluded"></span></span> </span></span> <span class="navigation" style="display: none;"><span id="anchor-navigation1" data-tags="missing_doc bad_doc agenda log"><span class="tag arrow" onclick="navigateTag(this.parentNode, -1)">◂</span><span class="tag arrow" onclick="navigateTag(this.parentNode, 1)">▸</span> <span class="statistics"><span class="current">1</span>/<span class="sum"></span>+<span class="excluded"></span></span> </span></span> <span class="navigation"><span class="tag success" onclick="toggleAnchors(this, 'success', 'anchor-navigation2')">Success</span> <span class="success" id="tagsum-success">4</span> <span id="anchor-navigation2" data-tags="missing_test bad_test untestable bug success benchmark"><span class="tag arrow" onclick="navigateTag(this.parentNode, -1)">◂</span><span class="tag arrow" onclick="navigateTag(this.parentNode, 1)">▸</span> <span class="statistics"><span class="current">1</span>/<span class="sum"></span>+<span class="excluded"></span></span> </span></span></div><div id="main" onmouseover="this.focus()" onmouseout="this.blur()" tabindex="0"><div class="module"><div class="feature"><div></div><div class="feature-contents"><div class="user-item"><div class="p">The gem <code class="inline">compact_time</code> is a Ruby implementation of a proposal by its author to describe date and/or time in a compact and logical way. In the gem, <code class="inline">Time</code> objects are assigned a few methods for expressing them in the proposed notation.</div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature2">1. License</h2><div class="feature-contents"><div class="user-item"><div class="p">The MIT License (MIT)</div><div class="p">Copyright (c) 2013-2016 sawa</div><div class="p">Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</div><div class="p">The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</div><div class="p">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</div></div></div></div><div class="feature"><h2 id="feature3">2. Compact Time Notation</h2><div class="feature-contents"></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h3 id="feature4">2.1. Components</h3><div class="feature-contents"><div class="user-item"><div class="p">The design of the notation is based on the following guildlines:</div><ul><li>Make use of the two natural units &quot;year&quot; and &quot;day&quot;, which correspond to the revolution and rotation periods of the earth, respectively, and on which the concept of scheduling has widely depended on throughout human history.</li><li>Get rid of the notion &quot;month&quot;, which is relatively popular today, but is nevertheless not a simple regular/logical notion as is today due to its modification over the history.</li><li>Instead, make use of the notion &quot;week&quot;, which is arbitrary and has its origin in particular religion, but has neverthelss become the de facto scheduling unit of daily life throughout the developed world today.</li><li>The notions &quot;hour&quot;, &quot;minute&quot;, and &quot;second&quot; are arbitrary, but are not as irregular as &quot;month&quot;, and are so commonly used today that it is unpractical to invent a system not based on them and expect it to be used widely. Hence, use them.</li></ul><div class="p">For regularity, the proposed notation adopts ISO 8601&apos;s &quot;week-numbering year&quot; as the notion of year. The proposal is also based on ISO 8601 week, but such notion of week is not very useful as is. In particular, its range (1 to 52 for common years, 1 to 53 for leap years) is too large for an average person to recognize in daily life. To solve this problem, the propsed notation introduces the notion &quot;quatery&quot;. A common year consists of four quateries, each consisting of thirteen ISO 8601 weeks. A leap year has a fifth quatery that consists of a single week. A week consists of seven &quot;days of week&quot;.</div><div class="p">Regarding the time part, the notions &quot;24-hour&quot;, &quot;minute&quot;, &quot;second&quot;, and &quot;millisecond&quot; are adopted, and they are displayed together with the difference from UTC.</div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h3 id="feature5">2.2. Notation</h3><div class="feature-contents"><div class="user-item"><div class="p">For compactness and readability, the notation does not use a delimiter within the date part. This is made possible by expressing the elements alternatively in letters and in numbers. Particularly, quateries are expressed with &quot;A&quot; to &quot;E&quot;, and the days of week are expressed with &quot;A&quot; to &quot;G&quot;. For example, the time object:</div><div class="CodeRay">
+  <div class="code"><pre>time = <span class="constant">Time</span>.new(<span class="integer">2000</span>, <span class="integer">1</span>, <span class="integer">1</span>)
+</pre></div>
+</div>
+<div class="p">will have its date part expressed as:</div><div class="CodeRay">
+  <div class="code"><pre>time.compact_date <span class="comment"># =&gt; &quot;1999D13F&quot;</span>
+</pre></div>
+</div>
+<div class="p">For programmatic use, the elements can be acheived in an array:</div><div class="CodeRay">
+  <div class="code"><pre>time.compact_date_array <span class="comment"># =&gt; [1999, &quot;D&quot;, 13, &quot;F&quot;]</span>
+</pre></div>
+</div>
+<div class="p">The time part uses the conventional notation. For complete date-time and just the time portion, the following expressions are available:</div><div class="CodeRay">
+  <div class="code"><pre>time = <span class="constant">Time</span>.new(<span class="integer">2000</span>, <span class="integer">1</span>, <span class="integer">1</span>, <span class="integer">15</span>, <span class="integer">24</span>, <span class="integer">60</span>, <span class="integer">0</span>)
+time.compact_date_time <span class="comment"># =&gt; &quot;1999D13F 15:25:00.000+00:00&quot;</span>
+time.compact_time      <span class="comment"># =&gt; &quot;15:25:00.000+00:00&quot;</span>
+</pre></div>
+</div>
+</div></div></div></div><div class="module"><div class="feature" onclick="toggleModuleContents(this)"><h1 class="module-header" id="feature6"><span class="anchor" id="public1"><span class="tag public">public</span></span> class <span class="feature-name">Time</span> <span class="anchor" id="moved1"><span class="tag moved">Moved</span></span></h1><div class="feature-contents"><div class="dev-item"><div class="diagram"><div class="mixins"><div>Comparable</div><div>┊</div><div><a href="#feature16">CompactTime</a></div><div>┊</div><div class="baseline">Time</div></div> &lt; <div class="mixins"><div>Kernel</div><div>┊</div><div class="baseline">Object</div></div> &lt; <div class="mixins"><div class="baseline">BasicObject</div></div></div><div class="diagram"><div class="mixins"><div class="baseline">&lt;&lt;Time</div></div> &lt; <div class="mixins"><div class="baseline">&lt;&lt;Object</div></div> &lt; <div class="mixins"><div class="baseline">&lt;&lt;BasicObject</div></div> &lt; <div class="mixins"><div class="baseline">Class</div></div> &lt; <div class="mixins"><div class="baseline">Module</div></div> &lt; <div class="mixins"><div>Kernel</div><div>┊</div><div class="baseline">Object</div></div> &lt; <div class="mixins"><div class="baseline">BasicObject</div></div></div><div class="p"><span class="head">Setup code</span></div><div class="CodeRay">
+  <div class="code"><pre>time = <span class="constant">Time</span>.new(<span class="integer">2000</span>, <span class="integer">1</span>, <span class="integer">1</span>, <span class="integer">15</span>, <span class="integer">24</span>, <span class="integer">60</span>, <span class="integer">0</span>)</pre></div>
+</div>
+</div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature7"><span class="anchor" id="public2"><span class="tag public">public</span></span> <span class="anchor" id="instance1"><span class="tag instance">1</span></span> Time#<span class="feature-name">compact_date_time</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">compact_date_time</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:4</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div><div class="user-item"><span class="head">Usage</span> <code class="inline">()</code> → String<div class="p">Joins <a href="#feature8"><code class="inline">#compact_date</code></a> and <a href="#feature10"><code class="inline">#compact_time</code></a> with a space. For example,</div><div class="CodeRay">
+  <div class="code"><pre><span class="constant">Time</span>.new(<span class="integer">2000</span>, <span class="integer">1</span>, <span class="integer">1</span>, <span class="integer">15</span>, <span class="integer">24</span>, <span class="integer">60</span>, <span class="integer">0</span>).compact_date_time <span class="comment"># =&gt; &quot;1999D13F 15:25:00.000+00:00&quot;</span></pre></div>
+</div>
+</div><div class="dev-item"><div class="anchor" id="success1"><div class="indent dev-text success p"><span class="hang-indent">​</span><span class="tag success">1</span> <code class="inline">time.<span class="bold">compact_date_time</span> <span class="verification">==</span><span class="verification"> &quot;1999D13F 15:25:00.000+00:00&quot;</span></code></div></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature8"><span class="anchor" id="public3"><span class="tag public">public</span></span> <span class="anchor" id="instance2"><span class="tag instance">2</span></span> Time#<span class="feature-name">compact_date</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">compact_date</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:5</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div><div class="user-item"><span class="head">Usage</span> <code class="inline">()</code> → String<div class="p">Returns a string of <code class="inline">self</code> in compact date format. For example,</div><div class="CodeRay">
+  <div class="code"><pre><span class="constant">Time</span>.new(<span class="integer">2000</span>, <span class="integer">1</span>, <span class="integer">1</span>, <span class="integer">15</span>, <span class="integer">24</span>, <span class="integer">60</span>, <span class="integer">0</span>).compact_date <span class="comment"># =&gt; &quot;1999D13F&quot;</span></pre></div>
+</div>
+</div><div class="dev-item"><div class="anchor" id="success2"><div class="indent dev-text success p"><span class="hang-indent">​</span><span class="tag success">2</span> <code class="inline">time.<span class="bold">compact_date</span> <span class="verification">==</span><span class="verification"> &quot;1999D13F&quot;</span></code></div></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature9"><span class="anchor" id="public4"><span class="tag public">public</span></span> <span class="anchor" id="instance3"><span class="tag instance">3</span></span> Time#<span class="feature-name">compact_date_array</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">compact_date_array</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:7</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div><div class="user-item"><span class="head">Usage</span> <code class="inline">()</code> → Array<div class="p">Returns an array of the elements used in <a href="#feature8"><code class="inline">#compact_date</code></a>. For example,</div><div class="CodeRay">
+  <div class="code"><pre><span class="constant">Time</span>.new(<span class="integer">2000</span>, <span class="integer">1</span>, <span class="integer">1</span>, <span class="integer">15</span>, <span class="integer">24</span>, <span class="integer">60</span>, <span class="integer">0</span>).compact_date_array <span class="comment"># =&gt; [1999, &quot;D&quot;, 13, &quot;F&quot;]</span></pre></div>
+</div>
+</div><div class="dev-item"><div class="anchor" id="success3"><div class="indent dev-text success p"><span class="hang-indent">​</span><span class="tag success">3</span> <code class="inline">time.<span class="bold">compact_date_array</span> <span class="verification">==</span><span class="verification"> [1999, &quot;D&quot;, 13, &quot;F&quot;]</span></code></div></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature10"><span class="anchor" id="public5"><span class="tag public">public</span></span> <span class="anchor" id="instance4"><span class="tag instance">4</span></span> Time#<span class="feature-name">compact_time</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">compact_time</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:6</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div><div class="user-item"><span class="head">Usage</span> <code class="inline">()</code> → String<div class="p">Returns a string of the time portion of <code class="inline">self</code>. It expresses 24-hour hour, minute, second, millisecond, and difference from UTC. For example,</div><div class="CodeRay">
+  <div class="code"><pre><span class="constant">Time</span>.new(<span class="integer">2000</span>, <span class="integer">1</span>, <span class="integer">1</span>, <span class="integer">15</span>, <span class="integer">24</span>, <span class="integer">60</span>, <span class="integer">0</span>).compact_time <span class="comment"># =&gt; &quot;15:25:00.000+00:00&quot;</span></pre></div>
+</div>
+</div><div class="dev-item"><div class="anchor" id="success4"><div class="indent dev-text success p"><span class="hang-indent">​</span><span class="tag success">4</span> <code class="inline">time.<span class="bold">compact_time</span> <span class="verification">==</span><span class="verification"> &quot;15:25:00.000+00:00&quot;</span></code></div></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature11"><span class="anchor" id="public6"><span class="tag public">public</span></span> <span class="anchor" id="constant1"><span class="tag constant">1</span></span> Time::<span class="feature-name">Alph</span> <span class="anchor" id="hidden1"><span class="tag hidden">Hidden</span></span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><span class="head">Value</span> <code class="inline">[nil, &quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;, &quot;G&quot;]</code></div><div class="p indent"><div class="p"><span class="head">Implementation</span></div><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:8</code><code>) </code></span></span><div class="clear"></div></div><div class="p">Letters used for <code class="inline">ctn_quatery</code> and <code class="inline">ctn_day</code>.</div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature12"><span class="anchor" id="protected1"><span class="tag protected">protected</span></span> <span class="anchor" id="instance5"><span class="tag instance">5</span></span> Time#<span class="feature-name">ctn_year</span> <span class="anchor" id="hidden2"><span class="tag hidden">Hidden</span></span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">ctn_year</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:9</code><code>) </code></span></span><div class="clear"></div></li></ul></div><div class="p">First element of <code class="inline">compact_date_array</code>.</div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature13"><span class="anchor" id="protected2"><span class="tag protected">protected</span></span> <span class="anchor" id="instance6"><span class="tag instance">6</span></span> Time#<span class="feature-name">ctn_quatery</span> <span class="anchor" id="hidden3"><span class="tag hidden">Hidden</span></span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">ctn_quatery</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:10</code><code>) </code></span></span><div class="clear"></div></li></ul></div><div class="p">Second element of <code class="inline">compact_date_array</code>.</div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature14"><span class="anchor" id="protected3"><span class="tag protected">protected</span></span> <span class="anchor" id="instance7"><span class="tag instance">7</span></span> Time#<span class="feature-name">ctn_week</span> <span class="anchor" id="hidden4"><span class="tag hidden">Hidden</span></span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">ctn_week</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:11</code><code>) </code></span></span><div class="clear"></div></li></ul></div><div class="p">Third element of <code class="inline">compact_date_array</code>.</div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature15"><span class="anchor" id="protected4"><span class="tag protected">protected</span></span> <span class="anchor" id="instance8"><span class="tag instance">8</span></span> Time#<span class="feature-name">ctn_day</span> <span class="anchor" id="hidden5"><span class="tag hidden">Hidden</span></span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">ctn_day</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:12</code><code>) </code></span></span><div class="clear"></div></li></ul></div><div class="p">Fourth element of <code class="inline">compact_date_array</code>.</div></div></div></div></div><div class="module"><div class="feature" onclick="toggleModuleContents(this)"><h1 class="module-header" id="feature16"><span class="anchor" id="public7"><span class="tag public">public</span></span> module <span class="feature-name">CompactTime</span> <span class="anchor" id="hidden6"><span class="tag hidden">Hidden</span></span></h1><div class="feature-contents"><div class="dev-item"><div class="diagram"><div class="mixins"><div class="baseline">CompactTime</div></div></div><div class="diagram"><div class="mixins"><div class="baseline">&lt;&lt;CompactTime</div></div> &lt; <div class="mixins"><div class="baseline">Module</div></div> &lt; <div class="mixins"><div>Kernel</div><div>┊</div><div class="baseline">Object</div></div> &lt; <div class="mixins"><div class="baseline">BasicObject</div></div></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature17"><span class="anchor" id="public8"><span class="tag public">public</span></span> <span class="anchor" id="instance9"><span class="tag instance">9</span></span> CompactTime#<span class="feature-name">compact_date_time</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">compact_date_time</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:4</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature18"><span class="anchor" id="public9"><span class="tag public">public</span></span> <span class="anchor" id="instance10"><span class="tag instance">10</span></span> CompactTime#<span class="feature-name">compact_date</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">compact_date</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:5</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature19"><span class="anchor" id="public10"><span class="tag public">public</span></span> <span class="anchor" id="instance11"><span class="tag instance">11</span></span> CompactTime#<span class="feature-name">compact_time</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">compact_time</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:6</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature20"><span class="anchor" id="public11"><span class="tag public">public</span></span> <span class="anchor" id="instance12"><span class="tag instance">12</span></span> CompactTime#<span class="feature-name">compact_date_array</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">compact_date_array</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:7</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature21"><span class="anchor" id="protected5"><span class="tag protected">protected</span></span> <span class="anchor" id="instance13"><span class="tag instance">13</span></span> CompactTime#<span class="feature-name">ctn_year</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">ctn_year</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:9</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature22"><span class="anchor" id="protected6"><span class="tag protected">protected</span></span> <span class="anchor" id="instance14"><span class="tag instance">14</span></span> CompactTime#<span class="feature-name">ctn_quatery</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">ctn_quatery</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:10</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature23"><span class="anchor" id="protected7"><span class="tag protected">protected</span></span> <span class="anchor" id="instance15"><span class="tag instance">15</span></span> CompactTime#<span class="feature-name">ctn_week</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">ctn_week</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:11</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature24"><span class="anchor" id="protected8"><span class="tag protected">protected</span></span> <span class="anchor" id="instance16"><span class="tag instance">16</span></span> CompactTime#<span class="feature-name">ctn_day</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><div class="p"><span class="head">Implementation candidates</span></div><ul><li class="implementation"><code class="inline">ctn_day</code><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:12</code><code>) </code></span></span><div class="clear"></div></li></ul></div></div></div></div><div class="feature" onclick="toggleFeatureContents(this)"><h2 id="feature25"><span class="anchor" id="public12"><span class="tag public">public</span></span> <span class="anchor" id="constant2"><span class="tag constant">2</span></span> CompactTime::<span class="feature-name">Alph</span></h2><div class="feature-contents"><div class="dev-item"><div class="p"><span class="head">Value</span> <code class="inline">[nil, &quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;, &quot;G&quot;]</code></div><div class="p indent"><div class="p"><span class="head">Implementation</span></div><span class="right"><span class="dev-text"><code> (</code><code>lib/compact_time.rb:8</code><code>) </code></span></span><div class="clear"></div></div></div></div></div></div><div class="module"><div class="feature" onclick="toggleModuleContents(this)"><h1 class="module-header" id="feature26"><span class="anchor" id="public13"><span class="tag public">public</span></span> class <span class="feature-name">Date</span> <span class="anchor" id="moved2"><span class="tag moved">Moved</span></span></h1><div class="feature-contents"><div class="dev-item"><div class="diagram"><div class="mixins"><div><a href="#feature16">CompactTime</a></div><div>┊</div><div class="baseline">Date</div></div> &lt; <div class="mixins"><div>Kernel</div><div>┊</div><div class="baseline">Object</div></div> &lt; <div class="mixins"><div class="baseline">BasicObject</div></div></div><div class="diagram"><div class="mixins"><div class="baseline">&lt;&lt;Date</div></div> &lt; <div class="mixins"><div class="baseline">&lt;&lt;Object</div></div> &lt; <div class="mixins"><div class="baseline">&lt;&lt;BasicObject</div></div> &lt; <div class="mixins"><div class="baseline">Class</div></div> &lt; <div class="mixins"><div class="baseline">Module</div></div> &lt; <div class="mixins"><div>Kernel</div><div>┊</div><div class="baseline">Object</div></div> &lt; <div class="mixins"><div class="baseline">BasicObject</div></div></div></div></div></div></div></div></div><script>//-*-mode: javascript-*-
+
+// Copyright (c) 2014-2016 sawa
+
+var main;
+var scrollMargin;
+
+// Scroll to the anchor.
+window.onhashchange = function(e) {
+//	location.href = location.hash;
+//	main.scrollTop -= main.offsetHeight * 0.5 + scrollMargin;
+	main.scrollTop -= scrollMargin;
+};
+
+document.body.onload = function() {
+	main = document.getElementById('main');
+	//This line is needed to invoke `window.onhashchange` even when `location.hash`
+	//  is the same as the previous load.
+	location.hash = '';
+	//TODO. Import data from webstore.
+	//location.hash =
+	var joinQuery = function(obj, prefix, affix){
+		return prefix + obj.dataset.tags.split(' ').join(affix + ', ' + prefix) + affix;
+	}
+	var tagsumPrefix = '#tagsum-', tagsumAffix = ':not([style="opacity: 0.2;"])';
+	var i, obj, query;
+	query = '.feature:not([style="display: none;"]) .tag.';
+	for(i = 1; obj = document.getElementById('user-feature-navigation' + i); i++) {
+		obj.query = joinQuery(obj, query, '');
+		obj.tagsums = joinQuery(obj, tagsumPrefix, tagsumAffix);
+		initializeNavigation(obj);
+	}
+	for(i = 1; obj = document.getElementById('dev-feature-navigation' + i); i++) {
+		obj.query = joinQuery(obj, query, '');
+		obj.tagsums = joinQuery(obj, tagsumPrefix, tagsumAffix);
+		initializeNavigation(obj);
+	}
+	query = '\
+	.feature:not([style="display: none;"]):not([folded="true"]) \
+	.feature-contents > :not([style="display: none;"]) \
+	.anchor:not([style="display: none;"]) \
+	.tag.';
+	for(i = 1; obj = document.getElementById('anchor-navigation' + i); i++) {
+		obj.query = joinQuery(obj, query, '');
+		obj.tagsums = joinQuery(obj, tagsumPrefix, tagsumAffix);
+		initializeNavigation(obj);
+	}
+	var objs = document.getElementsByClassName('feature');
+	for(var i = 0; i < objs.length; i++) {
+		// TODO. copy from webstore if any.
+		objs[i].hiddenFor = {};
+//		hide(objs[i], Object.keys(objs[i].hiddenFor).length);
+	}
+	switch(document.body.id){
+		case 'user':
+			scrollMargin = 200;
+			// Click "Features" button.
+			document.getElementById('top').children[0].children[1].onclick();
+		break;
+		case 'dev':
+			// Approximates half of line height from experience. TODO: Do it logically.
+			scrollMargin = 200;
+			// Click "Full" button. (Neccessary to do this also for adding `folded` attribute)
+			document.getElementById('top').children[0].children[2].onclick();
+		break;
+	}
+	// Prevents feature toggling.
+	// Overwriting `onclick` does not interfere with linking to `href`; it is different from `onclick`.
+	var objs = document.getElementsByTagName('a');
+	for(var i = 0; i < objs.length; i++) objs[i].onclick = function(e) {e.stopPropagation();};
+};
+
+initializeNavigation = function(obj) {
+	obj.features = document.querySelectorAll(obj.query);
+	var sum = obj.features.length;
+	obj.querySelector('.sum').innerText = sum;
+	var excluded = -sum;
+	var objs = document.querySelectorAll(obj.tagsums);
+	for(var i = 0; i < objs.length; i++) excluded += parseInt(objs[i].innerText);
+	obj.querySelector('.excluded').innerText = excluded;
+	var current = obj.querySelector('.current');
+	if(sum == 0) {
+		current.innerText = 1;
+	} else {if(parseInt(current.innerText) > sum
+		) current.innerText = sum;
+	};
+};
+
+initializeNavigations = function() {
+	for(var i = 1, obj; obj = document.getElementById('user-feature-navigation' + i); i++
+	) initializeNavigation(obj);
+	for(var i = 1, obj; obj = document.getElementById('dev-feature-navigation' + i); i++
+	) initializeNavigation(obj);
+	for(var i = 1, obj; obj = document.getElementById('anchor-navigation' + i); i++
+	) initializeNavigation(obj);
+};
+
+getFeatureNodeFromId = function(id) {
+	var obj = document.getElementById(id);
+	if(!obj) return null;
+	while(true) {
+		if(obj.className == 'feature') return obj;
+		obj = obj.parentNode;
+		if(!obj) return null;
+	}
+};
+
+getIdFromObj = function(obj) {
+	while(true) {
+		if(obj.id) return obj.id;
+		obj = obj.parentNode;
+		if(!obj) return null;
+	}
+};
+
+hide = function(obj, bool) {obj.style.display = bool ? 'none' : null;};
+
+inactivate = function(obj, bool) {obj.style.opacity = bool ? 0.2 : null;};
+
+mark = function(obj, bool) {return obj.marking = bool;};
+
+toggleMarking = function(obj) {return obj.marking = !obj.marking;};
+
+hideByTag = function(obj, tag, bool) {
+	if(bool) {obj.hiddenFor[tag] = true;} else {delete obj.hiddenFor[tag];};
+	hide(obj, Object.keys(obj.hiddenFor).length);
+};
+
+foldModuleContents = function(obj, bool){
+	obj.firstChild.setAttribute('folded', bool);
+	var objs = obj.childNodes;
+	foldFeatureContents(objs[0], bool);
+	// From the second children.
+	for (var i = 1; i < objs.length; i++) hideByTag(objs[i], 'folded', bool);
+	return bool;
+};
+
+foldFeatureContents = function(obj, bool){
+	obj.setAttribute('folded', bool);
+	hide(obj.firstChild.nextSibling, bool);
+	return bool;
+};
+
+displayMode = function(bool1, bool2) {
+	var objs = document.getElementsByClassName('module');
+	for(var i = 0; i < objs.length; i++) foldModuleContents(objs[i], mark(objs[i], bool1));
+	// `[onclick]`: Features with `type` `:module_as_constant` are not clickable.
+	// `:not(:first-child)`: Don't fold module headers here.
+	var objs = document.querySelectorAll('.feature[onclick]:not(:first-child)');
+	for(var i = 0; i < objs.length; i++) foldFeatureContents(objs[i], mark(objs[i], bool2));
+	initializeNavigations();
+};
+
+toggleModuleContents = function(feature) {
+	var module = feature.parentNode;
+	var bool = foldModuleContents(module, toggleMarking(module));
+	if(bool) {
+		module.scrollIntoView();	
+		window.onhashchange();
+	}
+	initializeNavigations();
+};
+
+toggleFeatureContents = function(feature) {
+	var bool = foldFeatureContents(feature, toggleMarking(feature));
+	if(bool) {
+		feature.scrollIntoView();	
+		window.onhashchange();
+	}
+	initializeNavigations();
+};
+
+toggleUserItems = function(button) {
+	// recordScrollPosition();
+	var bool = toggleMarking(button);
+	inactivate(button, bool);
+	objs = document.getElementsByClassName('user-item');
+	for(i = 0; i < objs.length; i++) hide(objs[i], bool);
+	initializeNavigations();
+	// resumeScrollPosition();
+};
+
+toggleFeatures = function(button, tag, navigation) {
+	// recordScrollPosition();
+	var bool = toggleMarking(button);
+	inactivate(button, bool);
+	inactivate(document.getElementById('tagsum-' + tag), bool);
+	for(var i = 1, obj; obj = getFeatureNodeFromId(tag + i); i ++) hideByTag(obj, tag, bool);
+	navigation = document.getElementById(navigation);
+	initializeNavigations();
+	// resumeScrollPosition();
+};
+
+toggleAnchors = function(button, tag, navigation) {
+	// recordScrollPosition();
+	var bool = toggleMarking(button);
+	inactivate(button, bool);
+	inactivate(document.getElementById('tagsum-' + tag), bool);
+	for(var i = 1, obj; obj = document.getElementById(tag + i); i ++) hide(obj, bool);
+	navigation = document.getElementById(navigation);
+	initializeNavigation(navigation);
+	// resumeScrollPosition();
+};
+
+navigateTag = function(navigation, d) {
+	var n = navigation.features.length;
+	if(n == 0) return;
+	var old = document.getElementById('current');
+	if(old) old.removeAttribute('id');
+	var current = navigation.querySelector('.current');
+	current.id = 'current';
+	var i = parseInt(current.innerText) + d;
+	if(i < 1) i = 1;
+	if(i > n) i = n;
+	current.innerText = i;
+	location.hash = getIdFromObj(navigation.features[i - 1]);
+};
+
+//var lastToggled =
+//var lastViewPort =
+recordScrollPosition = function() {
+//	main.scrollTop = navigation.features[i - 1].offsetTop - main.offsetTop;
+/*
+foo = function(obj) {
+	var ref =  window.scrollY - window.pageYOffset + document.documentElement.clientTop;
+	var checkChildDivs = function() {
+		var children = obj.childNodes;
+		if (children.length) {[].forEach.call(children, function(e, i, a) {
+			if (e.toString() === "[object HTMLDivElement]") {
+				// the top of the div relative to the document
+				// minus the height of window hidden above the top of the screen
+				var top = e.getBoundingClientRect().top;
+				// top and bottom posns relative to the top of the screen
+				// the top and bottom distances of the element relative to the top of the screen
+				// the div overlaps the screen top
+				if ((top <= ref) && (ref <= top + e.offsetHeight)) {
+					obj = e;
+					checkChildDivs();
+					return false;
+				}
+			}
+		});}
+	};
+	checkChildDivs();
+	return obj;
+};
+*/
+};
+
+resumeScrollPosition = function() {
+};
+
+coverage = function(obj){
+	alert("Sorry, this function is not implemented.");
+//	alert(obj.nextSibling.contentDocument.querySelector('body').innerText);
+//	var f = obj.dataset.file;
+};
+</script></body></html>
